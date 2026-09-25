@@ -1,4 +1,4 @@
-package net.braia.tutorialmod.items;
+package net.braia.tutorialmod.item;
 
 import net.braia.tutorialmod.TutorialMod;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
@@ -17,7 +17,7 @@ public class ModItems {
     }
     // public static final Item FLUORITE = registerItem("fluorite", properties -> new Item(properties.axe));
     public static final Item FLUORITE = registerItem("fluorite", Item::new);
-    public static final Item AMAZINGITEM = registerItem("amazingitem", Item::new);
+    public static final Item RAW_FLUORITE = registerItem("raw_fluorite", Item::new);
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name),
@@ -29,7 +29,7 @@ public class ModItems {
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.accept(FLUORITE);
-            output.accept(AMAZINGITEM);
+            output.accept(RAW_FLUORITE);
         });
     }
 }
