@@ -1,6 +1,7 @@
 package net.braia.tutorialmod;
 
-import net.braia.tutorialmod.items.ModItems;
+import net.braia.tutorialmod.creativemodetab.ModCreativeModeTabs;
+import net.braia.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -14,6 +15,8 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModCreativeModeTabs.registerModCreativeModeTabs();
+
 		ModItems.registerModItem();
 	}
 
