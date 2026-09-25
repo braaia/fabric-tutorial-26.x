@@ -1,5 +1,6 @@
 {
   "item.tutorialmod.fluorite": "Fluorite",
   "item.tutorialmod.raw_fluorite": "Raw Fluorite",
-  "creativemodetab.tutorialmod.tutorial_items": "Tutorial Items"
+  "creativemodetab.tutorialmod.tutorial_items": "Tutorial Items",
+  "creativemodetab.tutorialmod.test_tab": "Test Tab"
 }
