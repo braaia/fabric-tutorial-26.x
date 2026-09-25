@@ -1,5 +1,6 @@
 package net.braia.tutorialmod;
 
+import net.braia.tutorialmod.items.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
@@ -13,7 +14,7 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItem();
 	}
 
 	public static Identifier id(String path) {
