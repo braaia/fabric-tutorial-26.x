@@ -1,5 +1,6 @@
 package net.braia.tutorialmod;
 
+import net.braia.tutorialmod.block.ModBlocks;
 import net.braia.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.braia.tutorialmod.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -18,6 +19,7 @@ public class TutorialMod implements ModInitializer {
 		ModCreativeModeTabs.registerModCreativeModeTabs();
 
 		ModItems.registerModItem();
+		ModBlocks.registerModBlock();
 	}
 
 	public static Identifier id(String path) {
