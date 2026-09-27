@@ -17,6 +17,9 @@ import net.minecraft.world.level.block.state.BlockBehaviour;
 import java.util.function.Function;
 
 public class ModBlocks {
+    private ModBlocks() {
+    }
+
     public static Block FLUORITE_BLOCK = registerBlock("fluorite_block", properties ->
         new Block(properties.strength(5f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST))
     );
