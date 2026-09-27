@@ -30,11 +30,14 @@ public class ChiselItem extends Item {
     public @NonNull InteractionResult useOn(@NonNull UseOnContext context) {
         // Right Click Block
         // Change Block from A to B...
-
         Level level = context.getLevel();
+        if (level.isClientSide()) {
+            return InteractionResult.PASS;
+        }
+
         Block clickedBlock = level.getBlockState(context.getClickedPos()).getBlock();
 
-        if (CHISEL_MAP.containsKey(clickedBlock) && !level.isClientSide()) {
+        if (CHISEL_MAP.containsKey(clickedBlock)) {
             level.setBlockAndUpdate(context.getClickedPos(), CHISEL_MAP.get(clickedBlock).defaultBlockState());
 
             context.getItemInHand().hurtAndBreak(1, context.getPlayer(), context.getHand());
