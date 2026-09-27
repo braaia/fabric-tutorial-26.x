@@ -47,6 +47,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .group(FLUORITE_GROUP)
                         .unlockedBy(getHasName(ModItems.FLUORITE), has(ModItems.FLUORITE))
                         .save(output);
+                shaped(RecipeCategory.MISC, ModItems.KATANA)
+                        .define('F', ModItems.FLUORITE)
+                        .define('S', Items.STICK)
+                        .pattern("  F")
+                        .pattern(" F ")
+                        .pattern("S  ")
+                        .group(FLUORITE_GROUP)
+                        .unlockedBy(getHasName(ModItems.FLUORITE), has(ModItems.FLUORITE))
+                        .save(output);
             }
         };
     }

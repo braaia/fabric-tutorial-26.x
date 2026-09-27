@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RAW_FLUORITE);
 
                         output.accept(ModItems.CHISEL);
+                        output.accept(ModItems.KATANA);
                     }).build());
 
     public static final CreativeModeTab TUTORIAL_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,

@@ -2,6 +2,7 @@ package net.braia.tutorialmod.item;
 
 import net.braia.tutorialmod.TutorialMod;
 import net.braia.tutorialmod.item.custom.ChiselItem;
+import net.braia.tutorialmod.item.custom.KatanaItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -10,6 +11,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ToolMaterial;
 
 import java.util.function.Function;
 
@@ -21,6 +23,8 @@ public class ModItems {
     public static final Item RAW_FLUORITE = registerItem("raw_fluorite", Item::new);
 
     public static final Item CHISEL = registerItem("chisel", properties -> new ChiselItem(properties.durability(32)));
+    public static final Item KATANA = registerItem("katana", properties ->
+            new KatanaItem(properties.durability(500).sword(ToolMaterial.DIAMOND, 10f, 1.2f)));
 
     /* =============================================================================================================================================== */
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
