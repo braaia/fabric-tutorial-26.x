@@ -1,6 +1,7 @@
 package net.braia.tutorialmod.item;
 
 import net.braia.tutorialmod.TutorialMod;
+import net.braia.tutorialmod.item.custom.ChiselItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -18,6 +19,8 @@ public class ModItems {
     // public static final Item FLUORITE = registerItem("fluorite", properties -> new Item(properties.axe));
     public static final Item FLUORITE = registerItem("fluorite", Item::new);
     public static final Item RAW_FLUORITE = registerItem("raw_fluorite", Item::new);
+
+    public static final Item CHISEL = registerItem("chisel", properties -> new ChiselItem(properties.durability(32)));
 
     /* =============================================================================================================================================== */
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
