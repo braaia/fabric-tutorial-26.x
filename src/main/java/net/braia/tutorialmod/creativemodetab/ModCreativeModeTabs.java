@@ -32,6 +32,7 @@ public class ModCreativeModeTabs {
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.FLUORITE_BLOCK))
                     .title(Component.translatable("creativemodetab.tutorialmod.tutorial_blocks"))
                     .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.MAGIC_BLOCK);
                         output.accept(ModBlocks.FLUORITE_BLOCK);
                         output.accept(ModBlocks.RAW_FLUORITE_BLOCK);
 

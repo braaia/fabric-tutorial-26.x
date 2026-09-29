@@ -16,6 +16,7 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider registries) {
         valueLookupBuilder(BlockTags.MINEABLE_WITH_PICKAXE)
+                .add(ModBlocks.MAGIC_BLOCK)
                 .add(ModBlocks.RAW_FLUORITE_BLOCK)
                 .add(ModBlocks.FLUORITE_BLOCK)
 

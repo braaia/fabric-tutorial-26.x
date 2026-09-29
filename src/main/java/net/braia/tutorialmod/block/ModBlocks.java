@@ -1,6 +1,7 @@
 package net.braia.tutorialmod.block;
 
 import net.braia.tutorialmod.TutorialMod;
+import net.braia.tutorialmod.block.custom.MagicBlock;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -26,8 +27,6 @@ public class ModBlocks {
     public static Block RAW_FLUORITE_BLOCK = registerBlock("raw_fluorite_block", properties ->
         new Block(properties.strength(5f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST))
     );
-
-
     public static Block FLUORITE_ORE = registerBlock("fluorite_ore", properties ->
         new DropExperienceBlock(UniformInt.of(3, 7), properties.strength(3f).requiresCorrectToolForDrops().sound(SoundType.STONE))
     );
@@ -39,6 +38,10 @@ public class ModBlocks {
     );
     public static Block FLUORITE_NETHER_ORE = registerBlock("fluorite_nether_ore", properties ->
         new DropExperienceBlock(UniformInt.of(3, 7), properties.strength(5f).requiresCorrectToolForDrops().sound(SoundType.NETHERRACK))
+    );
+
+    public static Block MAGIC_BLOCK = registerBlock("magic_block", properties ->
+            new MagicBlock(properties.strength(2f).requiresCorrectToolForDrops().sound(SoundType.STONE))
     );
 
     /* =============================================================================================================================================== */
