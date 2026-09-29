@@ -25,6 +25,10 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.CHISEL);
                         output.accept(ModItems.KATANA);
+
+                        output.accept(ModItems.STRAWBERRY);
+                        output.accept(ModItems.SANDWICH);
+                        output.accept(ModItems.COROTE);
                     }).build());
 
     public static final CreativeModeTab TUTORIAL_BLOCKS_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,

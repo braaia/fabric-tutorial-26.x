@@ -1,7 +1,9 @@
 package net.braia.tutorialmod.item;
 
 import net.braia.tutorialmod.TutorialMod;
+import net.braia.tutorialmod.food.ModFoods;
 import net.braia.tutorialmod.item.custom.ChiselItem;
+import net.braia.tutorialmod.item.custom.CoroteItem;
 import net.braia.tutorialmod.item.custom.KatanaItem;
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
@@ -24,7 +26,14 @@ public class ModItems {
 
     public static final Item CHISEL = registerItem("chisel", properties -> new ChiselItem(properties.durability(32)));
     public static final Item KATANA = registerItem("katana", properties ->
-            new KatanaItem(properties.durability(500).sword(ToolMaterial.DIAMOND, 10f, 1.2f)));
+            new KatanaItem(properties.durability(500).sword(ToolMaterial.DIAMOND, 6f, 1f)));
+
+    public static final Item STRAWBERRY = registerItem("strawberry", properties ->
+            new Item(properties.food(ModFoods.STRAWBERRY, ModFoods.STRAWBERRY_CONSUMABLE)));
+    public static final Item SANDWICH = registerItem("sandwich", properties ->
+            new Item(properties.food(ModFoods.SANDWICH, ModFoods.SANDWICH_CONSUMABLE)));
+    public static final Item COROTE = registerItem("corote", properties ->
+            new CoroteItem(properties.food(ModFoods.COROTE, ModFoods.COROTE_CONSUMABLE)));
 
     /* =============================================================================================================================================== */
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
